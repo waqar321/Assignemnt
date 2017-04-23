@@ -1,0 +1,165 @@
+#arugment	def function(type1)
+#positional argument def function(type1, name)
+#Multiple Function Calls	
+#Keyword Arguments describe_pet(animal_type='hamster', pet_name='harry')
+#default value : 	def describe_pet(pet_name, animal_type='dog'):	
+#Making an Argument Optional: 
+#Returning a Dictionary: 
+
+#==============8.3====================
+
+#positional-arugment
+# def make_shirt(size, message):
+	# """Imported Shirts"""
+	# print("Quality:  " + message + "\n" + "Size:\t" + str(size))
+
+# make_shirt(15, "Imported Shirt")
+# make_shirt(size = 16, message ='Imported Shirt')
+
+#============== 8.4=====================
+
+# def make_shirt(size='large', message='I love Python!'):
+    # """Summarize the shirt that's going to be made."""
+    # print("\nI'm going to make a " + size + " t-shirt.")
+    # print('It will say, "' + message + '"')
+
+# make_shirt(size='medium')
+# make_shirt('small', 'Programmers are loopy.')
+
+#============= 8.5 ========================
+
+# def describe_city(city, country="pakistan"):
+	# """ City in country"""
+	# print("The " +  city + " is in " + country)
+# describe_city("karachi")
+# describe_city("hyderabad")
+# describe_city("Mombai")
+
+
+#================== 8.6============================
+
+# def get_formatted_name(first_name, last_name, middle_name=''):
+	# """Return a full name, neatly formatted."""
+	# if middle_name:
+		# full_name = first_name + ' ' + middle_name + ' ' + last_name
+	# else:
+		# full_name = first_name + ' ' + last_name
+	# return full_name.title()
+
+# musician = get_formatted_name('jimi', 'hendrix')
+# print(musician)
+# musician = get_formatted_name('john', 'hooker', 'lee')
+# print(musician)
+
+
+#==================== 8.7 =========================
+
+# def make_album(artist, title):
+	# """building a dictionary function"""
+	# album_dict = {'artist': artist.title(), 'title': title.title()}
+	# return album_dict
+	
+# print(make_album('atif_aslam', 'Jeene laga hoon'))
+
+# print(make_album('Arijit', 'Acha chalta hoon'))
+
+# print(make_album('Asim Azhar', 'Tenu samjhawan ki'))
+
+#================== 8.8 =========================
+
+# def make_album(artist, title):
+	# """building a dictionary function"""
+	# album_dict = {'artist': artist.title(), 'title': title.title()}
+	# return album_dict
+
+	# if tracks:
+		# album_dict['tracks'] = tracks
+	# return album_dict
+
+# title = "\nWhat album are you thinking of?"
+# artist = "Who's Artist"
+
+
+# print("Enter 'quit' at any time to stop")
+
+# while True:
+	# title1 = input(title)
+	# if title1 == 'quit':
+		# break
+
+	# artist1 = input(artist)
+	# if artist1 == 'quit':
+		# break
+
+	# album = make_album(artist, title)
+
+
+#===================== 8.12 ===========================
+
+# def func(*list):
+    # """Sandwich Order """
+    # for item in list:
+        # print(item.title(),"is added in Sandwich")
+    # return "\n\t***********Your Sanwich is Completed***********\n\n"
+
+# print(func("Onions","Mayo","Chillie Garlic","Cheder Chesse","Steam Chicken"))
+# print(func("Mayo","Chillie Garlic","Mozzrela Chesse","Steam Lamp"))
+# print(func("Onions","Hot Peri-Peri","Cheder Chesse","Baked Beef"))
+
+#===================== 8.13 ===========================
+
+# def build_profile(first,last,**my_self):
+    
+	# my_profile={}
+	# my_profile = {"first_name":first, 'last_name':last}
+    
+
+	# for key,value in my_self.items():
+        # print(key.title())
+	#	my_profile[key.title()]=value
+    # return my_profile
+
+# profile=build_profile("Taha","Mashhadi",profession='Student',Hobby='Coding',age=20)
+# print(profile)
+
+#======================== 8.14=========================
+
+def make_car(manufacturer,model_name,**car):
+    car_dic={'manufacturer1':manufacturer, 'model1':model_name}
+    for key,value in car.items():
+        print(key)
+        print(value)
+		
+    return car_dic
+car=make_car('Toyota','Prius',color="Candy Red",sun_roof=True)
+print(car)
+
+
+#========================= 8.15 continue with previous example imported!=======================
+  import assignment_chap_8
+from assignment_chap_8 import make_car
+from assignment_chap_8 import make_car as show
+import assignment_chap_8 as m
+from assignment_chap_8 import *
+
+print("\n============================= imported file============\n")
+show1=make_car('Toyota','Prius',color="Candy Red",sun_roof=True, anything="yes")
+print(show1)
+
+#============== project euler =========================
+
+# """Project Euler:Problem No#3"""
+
+
+# num = 600851475143
+# x = 2
+# factors = []
+
+# while (x <= num):
+    # while (num % x == 0):
+        # num = num / x
+        # factors.append(x)
+    # x = x + 1
+# print("The Largest Prime Factors Of '600851475143' are :")
+# print (factors)
+
